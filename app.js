@@ -1,10 +1,12 @@
-//lifecycle của node là 1 event loop (luôn chạy để lắng nghe sự kiện) keep running as long as there are event listeners registered
-//process.exit(); đùng để kết thúc life cycle của nodejs
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-  console.log(req);
-  // process.exit();
+  res.setHeader("Content-Type", "text/html");
+  res.write("<html>");
+  res.write("<head><title>My First Page</title></head>");
+  res.write("<body><h1>Hello from my Node.js Sever!</h1></body>");
+  res.write("</html>");
+  res.end();
 });
 
 server.listen(3000);
