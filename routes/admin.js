@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get("/add-product", (req, res, next) => {
   res.send(
-    '<form action="/product" method="POST"><input type="text" name="tittle"><button type="submit">Add Product</button></input></form>'
+    '<form action="/admin/product" method="POST"><input type="text" name="tittle"><button type="submit">Add Product</button></input></form>'
   );
 });
 
