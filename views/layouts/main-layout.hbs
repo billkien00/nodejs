@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> {{pageTitle}} </title>
     <link rel="stylesheet" href="/css/main.css">
-    {{#if formsCSS}}
+
+    {{#if formsCSS }}
         <link rel="stylesheet" href="/css/form.css">
     {{/if}}
-    {{#if productCSS}}
+    
+    {{#if productCSS }}
         <link rel="stylesheet" href="/css/product.css">
     {{/if}}
 </head>
@@ -19,8 +21,8 @@
     <header class="main-header">
         <nav class="main-header__nav">
             <ul class="main-header__item-list">
-                <li class="main-header__item"><a class="{{#if activeShop}}avctive{{/if}}" href="/">Shop</a></li>
-                <li class="main-header__item"><a class="{{#if activeAddProduct}}avctive{{/if}}" href="/admin/add-product">Add Product</a></li>
+                <li class="main-header__item"><a class="{{#if activeShop }}avctive{{/if}}" href="/">Shop</a></li>
+                <li class="main-header__item"><a class="{{#if activeAddProduct }}avctive{{/if}}" href="/admin/add-product">Add Product</a></li>
             </ul>
         </nav>
     </header>
