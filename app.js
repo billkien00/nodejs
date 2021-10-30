@@ -8,6 +8,8 @@ const app = express();
 app.engine(
   "hbs",
   expressHbs({
+    layoutsDir: "views/layouts/",
+    defaultLayout: "main-layout",
     extname: ".hbs",
   })
 );
@@ -16,7 +18,6 @@ app.set("views", "views");
 
 const adminData = require("./routes/admin");
 const shopRouters = require("./routes/shop");
-const { use } = require("./routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 // trả về path của thư mục public1
