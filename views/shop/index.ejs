@@ -22,14 +22,13 @@
                             <p class="product__description"><%= product.description %></p>
                         </div>
                         <div class="card__actions">
-                           <%-include('../includes/add-to-cart.ejs',{product:product})%>
+                            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
                         </div>
                     </article>
                 <% } %>
             </div>
         <% } else { %>
             <h1>No Products Found!</h1>
-            
         <% } %>
     </main>
 <%- include('../includes/end.ejs') %>
