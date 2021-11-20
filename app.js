@@ -5,12 +5,15 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const errorController = require("./controllers/error");
+const db = require("./util/database");
 
 app.set("view engine", "ejs");
 app.set("views", "views");
 
 const adminRoutes = require("./routes/admin");
 const shopRouters = require("./routes/shop");
+
+db.execute("SELECT * FROM products");
 
 //middleware để dùng dùng body(lấy dữ liệu sau khi submit có method là post) node 4.16
 // app.use(express.urlencoded()) gửi html lên sever
