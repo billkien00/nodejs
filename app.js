@@ -13,14 +13,6 @@ app.set("views", "views");
 const adminRoutes = require("./routes/admin");
 const shopRouters = require("./routes/shop");
 
-db.execute("SELECT * FROM products")
-  .then((result) => {
-    console.log(result[0], result[1]);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
 //middleware để dùng dùng body(lấy dữ liệu sau khi submit có method là post) node 4.16
 // app.use(express.urlencoded()) gửi html lên sever
 // app.use(express.json()) gửi js lên sever (XMLHttpRequest, fetch, axios,..)
