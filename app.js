@@ -17,7 +17,7 @@ db.execute("SELECT * FROM products");
 
 //middleware để dùng dùng body(lấy dữ liệu sau khi submit có method là post) node 4.16
 // app.use(express.urlencoded()) gửi html lên sever
-// app.use(express.json()) gửi js lên sever (XMLHttpRequest, fetch, axios,....)
+// app.use(express.json()) gửi js lên sever (XMLHttpRequest, fetch, axios,...)
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // trả về path của thư mục public
